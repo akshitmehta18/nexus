@@ -144,7 +144,7 @@
       // User line
       const userLine = document.createElement('div');
       userLine.className = 'terminal-row-user';
-      userLine.innerHTML = `<span class="terminal-prompt">akshit@editorial:~$</span> <span class="terminal-cmd-text">${cleanCmd.replace(/</g, '&lt;')}</span>`;
+      userLine.innerHTML = `<span class="terminal-prompt">akshit@nexus:~$</span> <span class="terminal-cmd-text">${cleanCmd.replace(/</g, '&lt;')}</span>`;
       termOutput.appendChild(userLine);
 
       // AI response

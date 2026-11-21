@@ -1,8 +1,9 @@
-# Akshit Mehta — Editorial Framed Portfolio & AI Systems
+# Nexus — Editorial Framed AI Agent & Systems Portfolio
 
 An editorial framed showcase and conversational AI intelligence system for **Akshit Mehta** — Full-Stack Data Scientist & Machine Learning Engineer (Chitkara University).
 
-- **GitHub Repository**: [https://github.com/akshitmehta18/portfolio-editorial](https://github.com/akshitmehta18/portfolio-editorial)
+- **Live Deployment**: [https://akshitmehta18.github.io/nexus/](https://akshitmehta18.github.io/nexus/)
+- **GitHub Repository**: [https://github.com/akshitmehta18/nexus](https://github.com/akshitmehta18/nexus)
 - **Primary Contact**: mehtaakshit65@gmail.com | +91 82191 78089 | [LinkedIn](https://www.linkedin.com/in/akshitmehta0004/)
 
 ---
@@ -15,19 +16,19 @@ Inspired by modern editorial card frames ("HeyFriends!" / Links Web aesthetic):
 - **Custom Theme Vector Logo**: Bespoke SVG glyph combining the `AM` monogram, neural network interconnects, and a vibrant yellow core accent dot (`#fff200`).
 - **Circled Headline Accent**: Hand-drawn vector loop highlighting the word *"intelligent"* in the hero statement.
 - **Divider with Highlighter Stroke**: Dark horizontal rule accented with a bright yellow highlighter marker bar.
-- **Hand-Drawn Developer / AI Doodle**: Vector line-art illustration featuring an engineer with brainstorm/neural-net curls, welcoming shrug gesture, floating `RESEARCH` stamp with highlighter stroke, `LOSS: 0.042` / `ROC 91.4%` stopwatch, Python badge, and Parquet/SQL database cylinder.
+- **Hand-Drawn Developer / AI Doodle**: Vector line-art illustration featuring an engineer with brainstorm/neural-net curls, welcoming shrug gesture, `RESEARCH` stamp with yellow highlighter stroke, `LOSS: 0.042` / `ROC 91.4%` stopwatch, Python badge, and Parquet/SQL database cylinder.
 - **Overlapping Capsule Action Dock**: Floating search dock allowing instant AI queries, quick navigation, and CTA trigger.
-- **External Visit Pill**: Bottom pill button (`🔗 Visit GitHub: @akshitmehta18/portfolio-editorial`) anchored outside the framed card.
+- **External Visit Pill**: Bottom pill button (`🔗 Visit GitHub: @akshitmehta18/nexus`) anchored outside the framed card.
 
 ---
 
-## ⚡ Connected AI Intelligence Engine
+## ⚡ Nexus AI Intelligence Engine
 
-The portfolio includes an integrated conversational AI knowledge system (`assets/js/ai-engine.js`) that answers queries across multiple domains:
+The portfolio includes an integrated conversational AI knowledge agent (`assets/js/ai-engine.js`) that answers queries across multiple domains:
 - **Akshit's Biography & Background**: Education at Chitkara University, current availability, and career focus.
 - **Technical Capabilities**: Predictive ML, statistical testing (ANOVA, Mann-Whitney U), ETL pipelines, and Next.js full-stack systems.
 - **Case Study Deep Dives**: Explains architectures, metrics, and technology stacks for all 7 featured projects.
-- **Interactive Terminal Lab**: Clickable chips (`help`, `about`, `skills`, `projects`, `stats`, `architecture`, `contact`, `hire`, `clear`) and full prompt evaluation.
+- **Interactive Terminal Lab**: Clickable chips (`help`, `about`, `skills`, `projects`, `stats`, `architecture`, `contact`, `hire`, `clear`) and full prompt evaluation (`akshit@nexus:~$`).
 
 ---
 
@@ -47,8 +48,8 @@ The portfolio includes an integrated conversational AI knowledge system (`assets
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/akshitmehta18/portfolio-editorial.git
-cd portfolio-editorial
+git clone https://github.com/akshitmehta18/nexus.git
+cd nexus
 ```
 
 ### 2. Run with Python

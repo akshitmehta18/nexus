@@ -1,18 +1,19 @@
 {
-  "name": "portfolio-editorial",
+  "name": "nexus",
   "version": "1.0.0",
-  "description": "Editorial Framed Portfolio & Connected AI Engine for Akshit Mehta - Full-Stack Data Scientist & ML Engineer",
+  "description": "Nexus — Editorial Framed AI Agent & Systems Portfolio for Akshit Mehta",
   "main": "index.html",
   "scripts": {
     "start": "npx serve . -l 3000",
     "serve": "python3 -m http.server 3000"
   },
   "keywords": [
+    "nexus",
+    "ai-agent",
     "portfolio",
     "data-science",
     "machine-learning",
     "full-stack",
-    "ai",
     "nextjs",
     "python"
   ],
