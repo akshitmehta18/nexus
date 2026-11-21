@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshit Mehta — Full-Stack Data Scientist &amp; ML Engineer</title>
+  
+  <meta name="description" content="Editorial framed portfolio &amp; AI intelligence system of Akshit Mehta: Predictive Machine Learning (91.4% AUC-ROC), Statistical EDA, High-Throughput ETL, and Full-Stack Next.js Systems.">
+  <meta name="keywords" content="Akshit Mehta, Data Science, Machine Learning Engineer, Chitkara University, Python, Scikit-Learn, Next.js, Vercel, Portfolio">
+  <meta name="author" content="Akshit Mehta">
+  <meta name="theme-color" content="#f5efe6">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Akshit Mehta — Full-Stack Data Scientist &amp; ML Engineer">
+  <meta property="og:description" content="Architecting intelligent ML pipelines &amp; high-impact full-stack systems.">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Early Theme Bootstrapper to prevent FOUT -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('akshit_theme_pref');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark-mode');
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('dark-mode'));
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Outer Editorial Canvas Wrapper -->
+  <div class="editorial-canvas">
+
+    <!-- Top Canvas Meta Bar -->
+    <header class="canvas-meta-bar">
+      <div class="canvas-meta-pill">
+        <span class="meta-status-dot"></span>
+        <span>Akshit Mehta &bull; Chitkara University</span>
+      </div>
+      <div class="canvas-meta-pill">
+        <span>Available for Data Science &amp; Full-Stack Roles</span>
+      </div>
+    </header>
+
+    <!-- Main Framed Viewport Card -->
+    <main class="framed-card">
+
+      <!-- Framed Navbar -->
+      <nav class="framed-nav" aria-label="Main Navigation">
+        <!-- Theme-Matched Bespoke Logo & Brand -->
+        <a href="#hero" class="brand-link" aria-label="Akshit Mehta Home">
+          <!-- Custom Vector SVG Logo: Interconnected AM Neural Node with Yellow Accent Dot -->
+          <svg class="brand-logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="12" fill="var(--text-main)" />
+            <!-- Neural Network Interconnected Loop forming AM Monogram -->
+            <path d="M12 32L18.5 13.5C18.8 12.6 19.8 12 20.8 12.2C21.6 12.4 22.2 13.1 22.4 13.9L25.5 24.5L28.8 13.8C29.1 12.8 30.1 12.2 31.1 12.5C31.9 12.8 32.5 13.5 32.7 14.4L35 32" 
+                  stroke="var(--card-bg)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- Bridge Bar -->
+            <path d="M15.5 24.5H27" stroke="var(--card-bg)" stroke-width="2.4" stroke-linecap="round" />
+            <!-- Node circles -->
+            <circle cx="12" cy="32" r="2.5" fill="var(--card-bg)" />
+            <circle cx="35" cy="32" r="2.5" fill="var(--card-bg)" />
+            <circle cx="25.5" cy="24.5" r="2.5" fill="var(--card-bg)" />
+            <!-- Vibrant Yellow Highlighter Core Dot -->
+            <circle cx="21" cy="13" r="3.2" fill="var(--accent-yellow)" />
+          </svg>
+          <div class="brand-info">
+            <span class="brand-name">akshit mehta</span>
+            <span class="brand-tag">Data Science + AI</span>
+          </div>
+        </a>
+
+        <!-- Nav Links -->
+        <ul class="nav-menu">
+          <li><a href="#capabilities" class="nav-item-link">Capabilities</a></li>
+          <li><a href="#case-studies" class="nav-item-link">Works (7)</a></li>
+          <li><a href="#philosophy" class="nav-item-link">Philosophy</a></li>
+          <li><a href="#terminal" class="nav-item-link">AI Shell</a></li>
+          <li><a href="#contact" class="nav-item-link">Contact</a></li>
+        </ul>
+
+        <!-- Nav Actions: Theme Switcher & CTA -->
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Switch theme">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-label">Dark</span>
+          </button>
+          <a href="#contact" class="nav-cta-pill">Let's Talk</a>
+        </div>
+      </nav>
+
+      <!-- ====================================================================
+           Hero Section: Framed Headline, Divider with Yellow Highlighter & Doodle
+           ==================================================================== -->
+      <section class="hero-showcase" id="hero">
+        <div class="hero-pill-badge">
+          <span>01 / Editorial Framework &bull; AI Lab</span>
+        </div>
+
+        <!-- Headline with Hand-Drawn Circled "intelligent" Accent -->
+        <h1 class="hero-headline">
+          Building <span class="circled-word">
+            intelligent
+            <!-- Hand-drawn vector SVG loop replicate -->
+            <svg class="circle-svg-loop" viewBox="0 0 280 110" preserveAspectRatio="none">
+              <path d="M 18,52 C 14,24 65,12 142,12 C 220,12 268,26 268,54 C 268,82 208,98 132,98 C 55,98 12,84 15,56 C 17,34 68,22 135,20" 
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+            </svg>
+          </span> ML pipelines with high-impact full-stack systems.
+        </h1>
+
+        <p class="hero-subhead">
+          Full-Stack Data Scientist &amp; Machine Learning Engineer specializing in predictive modeling (91.4% AUC-ROC), automated ETL pipelines, and high-performance edge web applications.
+        </p>
+
+        <!-- Horizontal Divider Bar with Bright Yellow Highlighter Stroke -->
+        <div class="hero-divider-bar">
+          <div class="divider-highlighter-stroke" title="Editorial Highlighter Accent"></div>
+        </div>
+
+        <!-- Hand-Drawn Developer / AI Doodle Line-Art Illustration -->
+        <div class="hero-doodle-container">
+          <svg class="hero-doodle-svg" viewBox="0 0 880 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="scribble-shadow" x="-5%" y="-5%" width="110%" height="110%">
+                <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.06"/>
+              </filter>
+            </defs>
+
+            <!-- Doodle Background Elements: Grid Dots & Sparkles -->
+            <g opacity="0.45" stroke="currentColor" stroke-width="1.8">
+              <path d="M 140,80 L 140,95 M 132.5,87.5 L 147.5,87.5" stroke-linecap="round" />
+              <path d="M 740,70 L 740,85 M 732.5,77.5 L 747.5,77.5" stroke-linecap="round" />
+              <circle cx="210" cy="110" r="3" fill="currentColor" />
+              <circle cx="680" cy="120" r="3" fill="currentColor" />
+              <circle cx="780" cy="220" r="3" fill="currentColor" />
+            </g>
+
+            <!-- Left Element 1: Stopwatch / Metrics Card [00:00 / 00:00] -->
+            <g transform="translate(180, 75)" filter="url(#scribble-shadow)">
+              <rect x="0" y="0" width="105" height="75" rx="10" fill="var(--card-bg)" stroke="currentColor" stroke-width="2.4" />
+              <text x="52" y="32" font-family="monospace" font-size="13" font-weight="bold" fill="currentColor" text-anchor="middle">00:00</text>
+              <line x1="16" y1="42" x2="89" y2="42" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <text x="52" y="60" font-family="monospace" font-size="13" font-weight="bold" fill="currentColor" text-anchor="middle">ROC 91.4%</text>
+            </g>
+
+            <!-- Left Element 2: Scissors / Feature Pruning Doodle -->
+            <g transform="translate(210, 165)" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <circle cx="16" cy="16" r="10" />
+              <circle cx="16" cy="42" r="10" />
+              <path d="M 24,20 L 52,48" />
+              <path d="M 24,38 L 52,10" />
+            </g>
+
+            <!-- Left Element 3: RESEARCH Stamp with Slanted Yellow Highlighter Streak -->
+            <g transform="translate(90, 240)">
+              <!-- Vibrant Yellow Highlighter Brush Mark -->
+              <rect x="5" y="8" width="135" height="26" rx="4" fill="var(--accent-yellow)" transform="rotate(-10 65 18)" />
+              <text x="70" y="24" font-family="sans-serif" font-size="14" font-weight="900" letter-spacing="2" fill="#141619" text-anchor="middle" transform="rotate(-10 70 24)">RESEARCH</text>
+            </g>
+
+            <!-- Left Element 4: Large Typography 'T' / Technical Matrix Stamp -->
+            <g transform="translate(145, 295)">
+              <text x="20" y="55" font-family="serif" font-size="62" font-weight="bold" fill="currentColor">T</text>
+            </g>
+
+            <!-- Left Element 5: Python Code Badge { def predict() } -->
+            <g transform="translate(200, 310)" filter="url(#scribble-shadow)">
+              <rect x="0" y="0" width="100" height="42" rx="8" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" />
+              <text x="50" y="26" font-family="monospace" font-size="11" font-weight="600" fill="currentColor" text-anchor="middle">py.predict()</text>
+            </g>
+
+            <!-- Center Character: Tangled Brainstorm / Neural Squiggle Hair & Welcoming Shrug -->
+            <g transform="translate(370, 110)">
+              <!-- Tangled Wild Curly Brainstorm Hair (Hand-Drawn Scribble) -->
+              <path d="M 52,95 
+                       C 32,80 15,65 32,40 C 48,16 85,10 102,32 C 120,8 152,15 158,42 C 172,32 188,48 182,72 C 196,86 182,112 165,115 C 175,135 150,152 135,142 C 125,158 98,155 88,140 C 72,155 45,145 42,125 C 22,125 18,102 38,92 Z" 
+                    fill="var(--card-bg)" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" />
+              <!-- Hair Internal Scribble Lines (Ideas / Neural Synapses) -->
+              <path d="M 45,70 Q 75,45 105,75 T 160,65 M 55,105 Q 85,90 120,115 T 165,100 M 70,55 Q 110,85 140,55 M 90,135 Q 125,120 145,135 M 60,85 Q 95,125 130,85" 
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
+              <!-- Face / Chin Contour -->
+              <path d="M 62,130 C 65,160 85,178 112,178 C 138,178 158,160 162,130" 
+                    stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none" />
+              <!-- Neck -->
+              <path d="M 92,175 L 92,205 M 132,175 L 132,205" 
+                    stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+              <!-- Collar / Shirt Neckline -->
+              <path d="M 75,208 C 95,225 130,225 148,208" 
+                    stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none" />
+              <!-- Torso / Shirt -->
+              <path d="M 75,208 C 45,225 35,260 30,310 L 195,310 C 190,260 180,225 148,208" 
+                    stroke="currentColor" stroke-width="2.6" fill="var(--card-bg)" />
+              <!-- Left Outstretched Arm (Welcoming Shrug) -->
+              <path d="M 42,228 C 10,245 -35,240 -65,225 C -78,218 -85,205 -95,215 C -102,222 -95,235 -85,242 L -45,265 C -15,278 15,280 32,285" 
+                    stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <!-- Left Hand Open Gesturing Fingers -->
+              <path d="M -95,215 C -105,208 -112,212 -115,220 M -98,222 C -112,222 -118,228 -115,235 M -90,232 C -105,236 -110,244 -105,248" 
+                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              <!-- Right Outstretched Arm (Welcoming Shrug) -->
+              <path d="M 180,228 C 215,245 260,240 290,225 C 302,218 310,205 320,215 C 328,222 320,235 310,242 L 270,265 C 240,278 210,280 192,285" 
+                    stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <!-- Right Hand Fingers -->
+              <path d="M 320,215 C 330,208 338,212 340,220 M 322,222 C 335,222 342,228 340,235 M 315,232 C 330,236 335,244 330,248" 
+                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+            </g>
+
+            <!-- Right Element 1: Ideas Question Mark '?' with Winding Cord -->
+            <g transform="translate(620, 65)">
+              <text x="18" y="45" font-family="sans-serif" font-size="46" font-weight="900" fill="currentColor">?</text>
+              <path d="M 28,52 C 28,85 55,95 42,125 C 32,150 52,175 48,195" 
+                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none" />
+              <rect x="42" y="195" width="12" height="12" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" />
+            </g>
+
+            <!-- Right Element 2: Production Clapperboard / Pipeline Slate -->
+            <g transform="translate(680, 115)" filter="url(#scribble-shadow)">
+              <rect x="0" y="24" width="95" height="60" rx="8" fill="var(--card-bg)" stroke="currentColor" stroke-width="2.4" />
+              <!-- Clapper Arm -->
+              <path d="M -5,22 L 92,2 M 15,18 L 30,14 M 40,12 L 55,8 M 65,7 L 80,3" 
+                    stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+              <!-- Mini Loss Curve inside Slate -->
+              <path d="M 15,70 Q 35,40 55,55 T 85,38" 
+                    stroke="var(--accent-loop)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            </g>
+
+            <!-- Right Element 3: Hand-Drawn 'TITLES & METRICS' Tag -->
+            <g transform="translate(650, 220)">
+              <text x="35" y="22" font-family="sans-serif" font-size="13" font-weight="bold" letter-spacing="1.5" fill="currentColor" transform="rotate(12 35 22)">TITLES</text>
+              <!-- Ribbon loop -->
+              <path d="M 85,25 C 105,30 115,55 95,65 C 75,75 80,95 110,85" 
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
+            </g>
+
+            <!-- Right Element 4: Parquet / Normalized SQL Database Cylinder -->
+            <g transform="translate(650, 310)" stroke="currentColor" stroke-width="2.2">
+              <ellipse cx="40" cy="12" rx="35" ry="10" fill="var(--card-bg)" />
+              <path d="M 5,12 L 5,38 C 5,44 18,48 40,48 C 62,48 75,44 75,38 L 75,12" fill="none" />
+              <path d="M 5,25 C 5,31 18,35 40,35 C 62,35 75,31 75,25" fill="none" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- ==================================================================
+             Overlapping Floating Capsule Action Dock
+             ================================================================== -->
+        <div class="hero-capsule-dock" role="search" aria-label="Quick AI Query & Navigation Dock">
+          <div class="capsule-input-wrap">
+            <svg class="capsule-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="hero-ai-input" class="capsule-input" placeholder="Ask Akshit AI a question or browse projects..." autocomplete="off">
+          </div>
+
+          <div class="capsule-actions">
+            <button type="button" id="hero-ai-btn" class="capsule-btn-secondary" onclick="document.querySelector('#case-studies').scrollIntoView({behavior:'smooth'})">
+              Explore Works
+            </button>
+            <button type="button" class="capsule-btn-secondary" onclick="document.querySelector('#terminal').scrollIntoView({behavior:'smooth'})">
+              CLI Shell &gt;_
+            </button>
+            <button type="button" class="capsule-btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+              <span>Get Started Now!</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Section 01: Technical Matrix (4 Core Capabilities)
+           ==================================================================== -->
+      <section class="framed-section" id="capabilities">
+        <span class="section-eyebrow">01 / Technical Matrix</span>
+        <h2 class="section-title">Core Disciplines &amp; System Architecture</h2>
+        <p class="section-subtitle">
+          Rigorous engineering across every phase of data transformation, statistical modeling, and modern edge web delivery.
+        </p>
+
+        <div class="matrix-grid">
+          <!-- 01 Machine Learning -->
+          <article class="matrix-card">
+            <span class="matrix-card-num">01 / 04</span>
+            <h3 class="matrix-card-title">Predictive Machine Learning</h3>
+            <ul class="matrix-card-list">
+              <li>Classification &amp; Regression Models</li>
+              <li>AUC-ROC &amp; F1 Optimization (91.4%)</li>
+              <li>Scikit-Learn, Pandas, NumPy, XGBoost</li>
+              <li>Deterministic Validation Folds</li>
+              <li>Hyperparameter Search &amp; Sensitivity Analysis</li>
+            </ul>
+          </article>
+
+          <!-- 02 Statistical EDA -->
+          <article class="matrix-card">
+            <span class="matrix-card-num">02 / 04</span>
+            <h3 class="matrix-card-title">Statistical EDA &amp; Testing</h3>
+            <ul class="matrix-card-list">
+              <li>Hypothesis Testing (ANOVA, Mann-Whitney U)</li>
+              <li>Outlier Mitigations (IQR, Winsorization)</li>
+              <li>Distribution Fitting via SciPy Stats</li>
+              <li>Multi-Dimensional Seaborn Visual Suites</li>
+              <li>Carrier SLA &amp; Friction Profiling</li>
+            </ul>
+          </article>
+
+          <!-- 03 ETL & Data Hygiene -->
+          <article class="matrix-card">
+            <span class="matrix-card-num">03 / 04</span>
+            <h3 class="matrix-card-title">Data Engineering &amp; ETL</h3>
+            <ul class="matrix-card-list">
+              <li>Automated Schema Validation</li>
+              <li>Context-Aware Missing Value Imputation</li>
+              <li>Normalized SQL &amp; Parquet Pipelines</li>
+              <li>Zero Data Leakage Guarantees</li>
+              <li>High-Throughput Batch Cleansing</li>
+            </ul>
+          </article>
+
+          <!-- 04 Full-Stack Systems -->
+          <article class="matrix-card">
+            <span class="matrix-card-num">04 / 04</span>
+            <h3 class="matrix-card-title">Full-Stack &amp; Systems</h3>
+            <ul class="matrix-card-list">
+              <li>Next.js 14 App Router &amp; TypeScript</li>
+              <li>Tailwind CSS &amp; Accessible Design Systems</li>
+              <li>Vercel Edge Cloud Deployment</li>
+              <li>C++ Low-Level Systems &amp; SFML Engine</li>
+              <li>RESTful APIs &amp; Deterministic Loops</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Section 02: Selected Case Studies (7 Repositories)
+           ==================================================================== -->
+      <section class="framed-section" id="case-studies">
+        <span class="section-eyebrow">02 / Portfolio Repositories</span>
+        <h2 class="section-title">Selected Case Studies &amp; Systems</h2>
+        <p class="section-subtitle">
+          Click "Inspect Architecture" on any project to explore system data flows, machine learning metrics, and source repositories.
+        </p>
+
+        <!-- Dynamically rendered via assets/js/main.js & projects-data.js -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </section>
+
+      <!-- ====================================================================
+           Section 03: Operational Philosophy (4 Core Principles)
+           ==================================================================== -->
+      <section class="framed-section" id="philosophy">
+        <span class="section-eyebrow">03 / Operational Philosophy</span>
+        <h2 class="section-title">Why Work With Akshit Mehta</h2>
+        <p class="section-subtitle">
+          Four foundational principles guiding every line of code, machine learning experiment, and system architecture.
+        </p>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <div class="philosophy-tag">01 / EMPIRICAL RIGOR</div>
+            <h3 class="philosophy-title">Data-Backed Decisions</h3>
+            <p class="philosophy-text">Every modeling choice is validated with statistical significance, cross-validation metrics, and concrete cost-benefit analyses rather than intuitive guesses.</p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="philosophy-tag">02 / ZERO LEAKAGE</div>
+            <h3 class="philosophy-title">Production Integrity</h3>
+            <p class="philosophy-text">Strict separation between training distributions and live validation prevents optimistic overfitting and guarantees deterministic real-world performance.</p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="philosophy-tag">03 / FULL LIFECYCLE</div>
+            <h3 class="philosophy-title">End-to-End Ownership</h3>
+            <p class="philosophy-text">Bridging the entire divide: from exploratory data analysis and Python machine learning pipelines to high-performance responsive web user experiences.</p>
+          </div>
+
+          <div class="philosophy-card">
+            <div class="philosophy-tag">04 / EXECUTION SPEED</div>
+            <h3 class="philosophy-title">Clean, Modular Code</h3>
+            <p class="philosophy-text">Well-documented repositories with automated CI/CD deployment pipelines, reproducible Jupyter notebooks, and production maintainability.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Section 04: Connected AI Assistant & Terminal Console
+           ==================================================================== -->
+      <section class="framed-section" id="terminal">
+        <div class="terminal-block">
+          <div>
+            <span class="section-eyebrow">04 / Developer Console &bull; Connected AI Engine</span>
+            <h2 class="section-title">Interactive AI Terminal Lab</h2>
+            <p class="section-subtitle">
+              Ask natural language queries or click any quick-action shortcut button below to interact with Akshit's AI knowledge engine:
+            </p>
+          </div>
+
+          <!-- Quick Action Command Chips -->
+          <div class="terminal-chip-bar">
+            <button class="term-chip accent-chip" data-cmd="help">help</button>
+            <button class="term-chip" data-cmd="hey there">hey there 👋</button>
+            <button class="term-chip" data-cmd="about">about</button>
+            <button class="term-chip" data-cmd="skills">skills</button>
+            <button class="term-chip" data-cmd="projects">projects</button>
+            <button class="term-chip" data-cmd="stats">stats</button>
+            <button class="term-chip" data-cmd="architecture">architecture</button>
+            <button class="term-chip" data-cmd="contact">contact</button>
+            <button class="term-chip accent-chip" data-cmd="hire">hire</button>
+            <button class="term-chip" data-cmd="clear">clear</button>
+          </div>
+
+          <!-- Terminal Window -->
+          <div class="terminal-window">
+            <div class="terminal-topbar">
+              <div class="terminal-window-dots">
+                <span class="term-dot dot-red"></span>
+                <span class="term-dot dot-yellow"></span>
+                <span class="term-dot dot-green"></span>
+                <span style="margin-left: 8px; color: #cbd5e1; font-weight: 600;">akshit@editorial-ai:~ (zsh)</span>
+              </div>
+              <span>connected ai engine v4.0</span>
+            </div>
+
+            <div class="terminal-body" id="terminal-output">
+              <div class="terminal-row-ai">
+                <strong>Welcome to Akshit Mehta's AI Knowledge Lab.</strong><br>
+                Ask any question about Akshit's Machine Learning pipelines, 7 case studies, or type <code style="color: #60a5fa;">help</code> for available commands.
+              </div>
+            </div>
+
+            <div class="terminal-input-bar">
+              <span class="terminal-prompt">akshit@editorial:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command or natural question (e.g. 'what is roc-auc?', 'skills', 'about')..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Section 05: Let's Talk & Direct Contact Hub
+           ==================================================================== -->
+      <section class="framed-section" id="contact">
+        <span class="section-eyebrow">05 / Get In Touch</span>
+        <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+        <p class="section-subtitle">
+          Open for full-time engineering roles, high-impact data science consulting, and technical collaborations.
+        </p>
+
+        <!-- Direct Connect Cards -->
+        <div class="contact-hub-grid">
+          <div class="contact-card">
+            <span class="contact-label">Direct Email</span>
+            <a href="mailto:mehtaakshit65@gmail.com" class="contact-value" id="copy-email-btn" onclick="window.copyToClipboard('mehtaakshit65@gmail.com', 'copy-email-label')">
+              <span id="copy-email-label">mehtaakshit65@gmail.com</span>
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-label">Phone &amp; WhatsApp</span>
+            <a href="tel:+918219178089" class="contact-value">
+              +91 82191 78089
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/akshitmehta0004/" target="_blank" rel="noopener noreferrer" class="contact-value">
+              in/akshitmehta0004 ↗
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-label">GitHub Profiles</span>
+            <a href="https://github.com/akshitmehta18" target="_blank" rel="noopener noreferrer" class="contact-value">
+              @akshitmehta18 ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <form id="contact-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="cf-name">Your Name *</label>
+                <input class="form-control" id="cf-name" type="text" required placeholder="Alex Rivera">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-email">Your Email *</label>
+                <input class="form-control" id="cf-email" type="email" required placeholder="alex@company.com">
+              </div>
+
+              <div class="form-group form-field-full">
+                <label class="form-label" for="cf-company">Organization or Project</label>
+                <input class="form-control" id="cf-company" type="text" placeholder="Acme AI / Tech Startup / Independent">
+              </div>
+
+              <div class="form-group form-field-full">
+                <label class="form-label" for="cf-message">Message *</label>
+                <textarea class="form-control" id="cf-message" rows="4" required placeholder="Tell me about what you are building or the role you are looking to fill..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="form-submit-btn">
+              <span>Send Message</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Success State Card -->
+          <div id="contact-success" class="contact-success-card">
+            <span class="success-badge">✓ MESSAGE DISPATCHED</span>
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.35rem;">Thank you!</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.25rem;">
+              Your message has been processed. I will reply directly to your email shortly.
+            </p>
+            <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+              <button type="button" id="contact-reset-btn" class="capsule-btn-secondary">Send Another Message</button>
+              <a href="#" target="_blank" rel="noopener noreferrer" id="gmail-open-btn" class="capsule-btn-primary">Open in Gmail ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Links Outside Framed Card (Replicating "🔗 Visit website" from reference image) -->
+    <footer class="canvas-bottom-dock">
+      <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+        <a href="https://github.com/akshitmehta18/portfolio-editorial" target="_blank" rel="noopener noreferrer" class="bottom-pill-btn">
+          <span>🔗 Visit GitHub: @akshitmehta18/portfolio-editorial</span>
+        </a>
+        <a href="https://portfolio-live-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="bottom-pill-btn">
+          <span>⚡ Live Vercel System</span>
+        </a>
+      </div>
+      <div>
+        <span>&copy; 2026 Akshit Mehta &bull; Chitkara University</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Project Deep-Dive Modal Window -->
+  <div id="project-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="window.closeProjectModal()" aria-label="Close dialog">&times;</button>
+      
+      <span id="modal-category" style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--accent-loop); letter-spacing: 0.05em;"></span>
+      <h3 id="modal-title" style="font-size: 1.85rem; font-weight: 700; margin: 0.4rem 0 0.85rem; color: var(--text-main);"></h3>
+      
+      <div style="margin-bottom: 1.25rem;">
+        <span id="modal-metrics" style="display: inline-block; background: var(--accent-yellow); color: #121212; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 6px;"></span>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; color: var(--text-light); margin-bottom: 0.4rem;">Overview</h4>
+        <p id="modal-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);"></p>
+      </div>
+
+      <div style="background: var(--surface-subtle); border: 1px solid var(--surface-border); border-radius: 10px; padding: 1.15rem; margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; font-family: var(--font-mono); margin-bottom: 0.4rem;">System Architecture Flow</h4>
+        <p id="modal-arch" style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-main); line-height: 1.5;"></p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; color: var(--text-light); margin-bottom: 0.4rem;">Key Engineering Features</h4>
+        <ul id="modal-features" style="list-style: none; font-size: 0.9rem; color: var(--text-muted);"></ul>
+      </div>
+
+      <div style="margin-bottom: 1.75rem;">
+        <h4 style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; color: var(--text-light); margin-bottom: 0.4rem;">Technologies</h4>
+        <div id="modal-tech" style="display: flex; flex-wrap: wrap; gap: 0.4rem;"></div>
+      </div>
+
+      <div id="modal-links" style="border-top: 1px solid var(--surface-border); padding-top: 1.25rem;"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/projects-data.js"></script>
+  <script src="assets/js/ai-engine.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

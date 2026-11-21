@@ -1,0 +1,1096 @@
+/* ==========================================================================
+   Editorial Framed Portfolio Design System
+   Akshit Mehta - Full-Stack Data Scientist & ML Engineer
+   ========================================================================== */
+
+:root {
+  --canvas-bg: #f5efe6;
+  --card-bg: #ffffff;
+  --card-border: #1c1c1c;
+  --card-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.12), 0 8px 24px -6px rgba(0, 0, 0, 0.08);
+  
+  --text-main: #141619;
+  --text-muted: #575d65;
+  --text-light: #8a919d;
+  
+  --accent-yellow: #fff200;
+  --accent-yellow-deep: #ffd000;
+  --accent-loop: #6366f1;
+  --accent-blue: #3b82f6;
+  --accent-green: #10b981;
+  
+  --surface-subtle: #f9f7f2;
+  --surface-border: #e3ded5;
+  --dock-bg: #ffffff;
+  --dock-border: #1c1c1c;
+  
+  --term-bg: #14171d;
+  --term-header: #1f242d;
+  --term-text: #e2e8f0;
+  --term-prompt: #aff005;
+  
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --radius-card: 26px;
+  --radius-pill: 9999px;
+  --radius-item: 14px;
+}
+
+body.dark-mode {
+  --canvas-bg: #0a0d12;
+  --card-bg: #13171f;
+  --card-border: #28303d;
+  --card-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.55), 0 8px 24px -6px rgba(0, 0, 0, 0.35);
+  
+  --text-main: #f0f4f8;
+  --text-muted: #9aa4b2;
+  --text-light: #647082;
+  
+  --accent-yellow: #ffe600;
+  --accent-yellow-deep: #ffd000;
+  --accent-loop: #818cf8;
+  --accent-blue: #60a5fa;
+  --accent-green: #34d399;
+  
+  --surface-subtle: #191f2a;
+  --surface-border: #2b3444;
+  --dock-bg: #191f2a;
+  --dock-border: #3b4658;
+  
+  --term-bg: #090c10;
+  --term-header: #141922;
+  --term-text: #e2e8f0;
+  --term-prompt: #aff005;
+}
+
+/* Reset & Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--canvas-bg);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 2rem 1.25rem 4rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Outer Canvas Container */
+.editorial-canvas {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Top External Breadcrumb / Status */
+.canvas-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0 0.5rem;
+}
+
+.canvas-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+}
+
+body.dark-mode .canvas-meta-pill {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.meta-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-green);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+/* ==========================================================================
+   Framed Browser Card (The Hero Aesthetic Skeleton)
+   ========================================================================== */
+.framed-card {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Framed Navbar */
+.framed-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.25rem;
+  border-bottom: 1.5px solid var(--surface-border);
+  position: sticky;
+  top: 0;
+  background: var(--card-bg);
+  z-index: 40;
+  backdrop-filter: blur(10px);
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo-svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.brand-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.nav-item-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+}
+
+.nav-item-link:hover {
+  color: var(--text-main);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--text-main);
+}
+
+.nav-cta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--text-main);
+  color: var(--card-bg);
+  padding: 0.48rem 1.2rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.nav-cta-pill:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Hero Section & Hand-Drawn Doodle Showcase
+   ========================================================================== */
+.hero-showcase {
+  padding: 3.5rem 2rem 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.hero-headline {
+  font-size: clamp(2.1rem, 4.8vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  max-width: 960px;
+  margin: 0 auto 1.5rem;
+  color: var(--text-main);
+}
+
+/* Hand-drawn circled word */
+.circled-word {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.circle-svg-loop {
+  position: absolute;
+  top: -16%;
+  left: -8%;
+  width: 116%;
+  height: 135%;
+  pointer-events: none;
+  stroke: var(--accent-loop);
+  fill: none;
+}
+
+.hero-subhead {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Horizontal Divider Bar with Yellow Highlighter Stroke
+   ========================================================================== */
+.hero-divider-bar {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  height: 6px;
+  background-color: var(--card-border);
+  margin: 0.5rem auto 2.5rem;
+}
+
+.divider-highlighter-stroke {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 120px;
+  height: 10px;
+  background-color: var(--accent-yellow);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Hand-Drawn Developer & AI Line-Art Doodle
+   ========================================================================== */
+.hero-doodle-container {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-doodle-svg {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  stroke: var(--text-main);
+}
+
+/* ==========================================================================
+   Floating Overlapping Capsule Action Dock
+   ========================================================================== */
+.hero-capsule-dock {
+  display: inline-flex;
+  align-items: center;
+  background: var(--dock-bg);
+  border: 2px solid var(--dock-border);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.18);
+  padding: 0.45rem 0.5rem 0.45rem 1.25rem;
+  gap: 0.75rem;
+  max-width: 90%;
+  margin-top: 1.25rem;
+  z-index: 10;
+  transition: box-shadow 0.2s ease;
+}
+
+.hero-capsule-dock:focus-within {
+  box-shadow: 0 20px 45px -8px rgba(0, 0, 0, 0.24);
+}
+
+.capsule-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 240px;
+}
+
+.capsule-input-icon {
+  color: var(--text-light);
+}
+
+.capsule-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  width: 100%;
+}
+
+.capsule-input::placeholder {
+  color: var(--text-light);
+}
+
+.capsule-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.capsule-btn-secondary {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.capsule-btn-secondary:hover {
+  background: var(--text-main);
+  color: var(--card-bg);
+}
+
+.capsule-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--text-main);
+  color: var(--card-bg);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.capsule-btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   Editorial Content Sections Inside Card
+   ========================================================================== */
+.framed-section {
+  padding: 3.5rem 2.5rem;
+  border-top: 1.5px solid var(--surface-border);
+}
+
+.section-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin-bottom: 2.25rem;
+  line-height: 1.55;
+}
+
+/* Capabilities Grid (01 to 04) */
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.matrix-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-item);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.matrix-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--card-border);
+}
+
+.matrix-card-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.matrix-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.matrix-card-list {
+  list-style: none;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.matrix-card-list li::before {
+  content: "— ";
+  color: var(--text-light);
+}
+
+/* Case Studies Repositories Grid (01 to 07) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.project-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-item);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--card-border);
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.08);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.project-card-num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.project-card-badge {
+  background: var(--accent-yellow);
+  color: #121212;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.project-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.project-card-metric {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-loop);
+  background: rgba(99, 102, 241, 0.08);
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-tag {
+  background: var(--card-bg);
+  border: 1px solid var(--surface-border);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--surface-border);
+}
+
+.project-inspect-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.project-inspect-btn:hover {
+  color: var(--accent-loop);
+}
+
+.project-gh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface-border);
+  color: var(--text-main);
+  transition: transform 0.15s ease;
+}
+
+.project-gh-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Philosophy Section (01 to 04) */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.philosophy-card {
+  padding: 1.5rem;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-item);
+  background: var(--surface-subtle);
+}
+
+.philosophy-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.philosophy-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.philosophy-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   AI Shell & Developer Terminal Lab
+   ========================================================================== */
+.terminal-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.terminal-chip-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.term-chip {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.term-chip:hover {
+  background: var(--text-main);
+  color: var(--card-bg);
+}
+
+.term-chip.accent-chip {
+  background: var(--accent-yellow);
+  color: #121212;
+  border-color: var(--accent-yellow-deep);
+}
+
+.terminal-window {
+  background: var(--term-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.4);
+}
+
+.terminal-topbar {
+  background: var(--term-header);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #8b949e;
+}
+
+.terminal-window-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.term-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+.terminal-body {
+  padding: 1.25rem 1.25rem 1rem;
+  max-height: 380px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--term-text);
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.terminal-row-user {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.terminal-prompt {
+  color: var(--term-prompt);
+  font-weight: 700;
+}
+
+.terminal-cmd-text {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.terminal-row-ai {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid var(--accent-loop);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  color: #d1d5db;
+}
+
+.terminal-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Contact Hub & Direct Connect
+   ========================================================================== */
+.contact-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-item);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: border-color 0.15s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--card-border);
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contact-form-wrap {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-item);
+  padding: 2rem;
+  max-width: 760px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-control {
+  background: var(--card-bg);
+  border: 1.5px solid var(--surface-border);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.form-control:focus {
+  border-color: var(--text-main);
+}
+
+.form-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--text-main);
+  color: var(--card-bg);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1.75rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.form-submit-btn:hover {
+  opacity: 0.9;
+}
+
+.contact-success-card {
+  padding: 2rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--accent-green);
+  border-radius: var(--radius-item);
+  text-align: center;
+  display: none;
+}
+
+.success-badge {
+  display: inline-block;
+  background: var(--accent-green);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   Bottom Links Outside Framed Card
+   ========================================================================== */
+.canvas-bottom-dock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 0.5rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.bottom-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fce7b2;
+  color: #4b3605;
+  border-radius: 6px;
+  padding: 0.35rem 0.85rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: transform 0.15s ease;
+}
+
+.bottom-pill-btn:hover {
+  transform: translateY(-1px);
+}
+
+body.dark-mode .bottom-pill-btn {
+  background: #3b321a;
+  color: #ffe6a3;
+}
+
+/* ==========================================================================
+   Project Deep-Dive Modal
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-backdrop.hidden {
+  display: none;
+}
+
+.modal-dialog {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: var(--radius-card);
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.25rem;
+  position: relative;
+  box-shadow: var(--card-shadow);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 860px) {
+  body {
+    padding: 1rem 0.75rem 3rem;
+  }
+
+  .framed-nav {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hero-showcase {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .hero-capsule-dock {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 20px;
+    padding: 0.75rem;
+  }
+
+  .capsule-actions {
+    justify-content: stretch;
+  }
+
+  .capsule-btn-secondary,
+  .capsule-btn-primary {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .framed-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

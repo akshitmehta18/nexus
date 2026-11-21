@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-editorial",
+  "version": "1.0.0",
+  "description": "Editorial Framed Portfolio & Connected AI Engine for Akshit Mehta - Full-Stack Data Scientist & ML Engineer",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "serve": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "data-science",
+    "machine-learning",
+    "full-stack",
+    "ai",
+    "nextjs",
+    "python"
+  ],
+  "author": "Akshit Mehta <mehtaakshit65@gmail.com>",
+  "license": "MIT"
+}
