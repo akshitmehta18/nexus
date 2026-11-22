@@ -23,11 +23,11 @@ window.PORTFOLIO_PROJECTS = [
       "Threshold-calibrated decision reports linked to an operational delay-cost sensitivity matrix"
     ],
     architecture: "Synthetic Log Generator → Feature Engineering & Outlier Pruning → Pipeline Encapsulation → 5-Fold Cross-Validation (Optuna) → AUC-ROC / PR Evaluation → Cost Sensitivity Matrix",
-    github: "https://github.com/Mehtaji2004/logistics-data-analysis",
+    github: "https://github.com/akshitmehta18/logistics-data-analysis",
     demo: null,
-    notebook: "https://github.com/Mehtaji2004/logistics-data-analysis/blob/main/notebooks/logistics_delay_prediction.ipynb",
-    datasetLink: "https://github.com/Mehtaji2004/logistics-data-analysis#synthetic-benchmark-dataset--data-dictionary",
-    walkthroughLink: "https://github.com/Mehtaji2004/logistics-data-analysis#model-evaluation--validation-strategy",
+    notebook: "https://github.com/akshitmehta18/logistics-data-analysis/blob/main/notebooks/logistics_delay_prediction.ipynb",
+    datasetLink: "https://github.com/akshitmehta18/logistics-data-analysis#synthetic-benchmark-dataset--data-dictionary",
+    walkthroughLink: "https://github.com/akshitmehta18/logistics-data-analysis#model-evaluation--validation-strategy",
     evidenceType: "Jupyter Notebook & Data Spec"
   },
   {
@@ -51,11 +51,11 @@ window.PORTFOLIO_PROJECTS = [
       "Actionable recommendations providing concrete SLA restructuring guidelines"
     ],
     architecture: "Raw Log Extraction → Normality Testing (SciPy) → Non-Parametric Hypothesis Verification → Multi-Dimensional Seaborn Suite → Executive Insights Digest",
-    github: "https://github.com/Mehtaji2004/logistics-eda-visualization",
+    github: "https://github.com/akshitmehta18/logistics-eda-visualization",
     demo: null,
-    notebook: "https://github.com/Mehtaji2004/logistics-eda-visualization/blob/main/notebooks/logistics_eda_analysis.ipynb",
-    datasetLink: "https://github.com/Mehtaji2004/logistics-eda-visualization#dataset-schema--variables",
-    walkthroughLink: "https://github.com/Mehtaji2004/logistics-eda-visualization#10-chart-visualization-suite-breakdown",
+    notebook: "https://github.com/akshitmehta18/logistics-eda-visualization/blob/main/notebooks/logistics_eda_analysis.ipynb",
+    datasetLink: "https://github.com/akshitmehta18/logistics-eda-visualization#dataset-schema--variables",
+    walkthroughLink: "https://github.com/akshitmehta18/logistics-eda-visualization#10-chart-visualization-suite-breakdown",
     evidenceType: "10-Chart Visual Suite & Notebook"
   },
   {
@@ -79,11 +79,11 @@ window.PORTFOLIO_PROJECTS = [
       "Extreme value winsorization preventing gradient explosion during model training"
     ],
     architecture: "Raw Heterogeneous Logs → Schema Validator → Missingness Imputer (KNN/Median) → Outlier Winsorizer → Scikit-Learn Pipeline Encapsulation → Clean Parquet/SQL Export",
-    github: "https://github.com/Mehtaji2004/logistics-data-preprocessing",
+    github: "https://github.com/akshitmehta18/logistics-data-preprocessing",
     demo: null,
-    notebook: "https://github.com/Mehtaji2004/logistics-data-preprocessing/blob/main/pipeline_walkthrough.py",
-    datasetLink: "https://github.com/Mehtaji2004/logistics-data-preprocessing#schema-definition--sample-inputs",
-    walkthroughLink: "https://github.com/Mehtaji2004/logistics-data-preprocessing#leakage-prevention-tests--benchmarks",
+    notebook: "https://github.com/akshitmehta18/logistics-data-preprocessing/blob/main/pipeline_walkthrough.py",
+    datasetLink: "https://github.com/akshitmehta18/logistics-data-preprocessing#schema-definition--sample-inputs",
+    walkthroughLink: "https://github.com/akshitmehta18/logistics-data-preprocessing#leakage-prevention-tests--benchmarks",
     evidenceType: "ETL Code & Leakage Test Suite"
   },
   {
@@ -107,11 +107,11 @@ window.PORTFOLIO_PROJECTS = [
       "Accessible responsive UI with smooth keyboard navigation and instant filter search"
     ],
     architecture: "Next.js 14 App Router → TypeScript React Components → Client State (Zustand/Context) → REST API Handlers → Vercel Edge CDN",
-    github: "https://github.com/Mehtaji2004/Talent-Sphere",
-    demo: "https://talent-sphere-xi.vercel.app",
+    github: "https://github.com/akshitmehta18/NexHire-AI",
+    demo: "https://nex-hire-ai-one.vercel.app/",
     notebook: null,
     datasetLink: null,
-    walkthroughLink: "https://github.com/Mehtaji2004/Talent-Sphere#features--architecture",
+    walkthroughLink: "https://github.com/akshitmehta18/NexHire-AI#core-features",
     evidenceType: "Live Web Application (Vercel)"
   },
   {
@@ -163,11 +163,11 @@ window.PORTFOLIO_PROJECTS = [
       "Interactive conversational terminal CLI interface with auto-suggest"
     ],
     architecture: "Developer Terminal Query → Intent & Entity Classifier (Python) → Spring Boot AST & Annotation Scanner → Structured Architectural Summary",
-    github: "https://github.com/Nikhilsaini2204/nix-2211981245-2211981043",
+    github: "https://github.com/akshitmehta18/nix",
     demo: null,
     notebook: null,
     datasetLink: null,
-    walkthroughLink: "https://github.com/Nikhilsaini2204/nix-2211981245-2211981043#architecture-and-nlp-walkthrough",
+    walkthroughLink: "https://github.com/akshitmehta18/nix#architecture-and-nlp-walkthrough",
     evidenceType: "CLI Architecture Walkthrough & Source"
   },
   {
@@ -191,11 +191,11 @@ window.PORTFOLIO_PROJECTS = [
       "Hardware-accelerated sprite rendering and multi-channel spatial audio playback via SFML"
     ],
     architecture: "C++ Engine Core → SFML Hardware Window/Audio → Pre-Allocated Entity Pools → Spatial Collision Pipeline → Fixed-Timestep Render Loop",
-    github: "https://github.com/Mehtaji2004/Stranded",
+    github: "https://github.com/akshitmehta18/Stranded",
     demo: null,
     notebook: null,
     datasetLink: null,
-    walkthroughLink: "https://github.com/Mehtaji2004/Stranded#gameplay-demo-and-build-guide",
+    walkthroughLink: "https://github.com/akshitmehta18/Stranded#compile",
     evidenceType: "Engine Architecture & Build Guide"
   }
 ];
