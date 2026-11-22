@@ -1094,3 +1094,357 @@ body.dark-mode .bottom-pill-btn {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Accessibility & Focus Ring System (WCAG AA Compliance)
+   ========================================================================== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.project-card:focus-visible,
+.term-chip:focus-visible {
+  outline: 2px solid var(--accent-loop);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   About & Experience Section
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-bio-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-item);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-bio-lead {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.about-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  list-style: none;
+  font-size: 0.92rem;
+  border-top: 1px solid var(--surface-border);
+  border-bottom: 1px solid var(--surface-border);
+  padding: 1.1rem 0;
+}
+
+.about-meta-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.about-meta-label {
+  font-weight: 700;
+  color: var(--text-main);
+  min-width: 110px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.about-meta-val {
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--accent-green);
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-green);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.about-account-callout {
+  background: rgba(99, 102, 241, 0.06);
+  border-left: 3px solid var(--accent-loop);
+  padding: 0.85rem 1.1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.86rem;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+.about-account-callout a {
+  color: var(--accent-loop);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.about-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-loop);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 1.35rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.timeline-item {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-item);
+  padding: 1.35rem 1.5rem;
+  transition: border-color 0.15s ease;
+}
+
+.timeline-item:hover {
+  border-color: var(--card-border);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.timeline-sub {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-loop);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Project Cards: Roles, Evidence & Status Indicators
+   ========================================================================== */
+.project-card-role-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--accent-loop);
+  margin-bottom: 0.65rem;
+  background: rgba(99, 102, 241, 0.08);
+  padding: 0.22rem 0.65rem;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.project-action-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.project-pill-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.project-pill-btn.live-btn {
+  background: var(--accent-green);
+  color: #ffffff;
+}
+
+.project-pill-btn.notebook-btn {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  color: var(--text-main);
+}
+
+.project-pill-btn.doc-btn {
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  color: var(--text-main);
+}
+
+.pulse-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+  animation: pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* ==========================================================================
+   Terminal Active Focus & Quick Chip Micro-Feedback
+   ========================================================================== */
+.terminal-input-active {
+  background: rgba(99, 102, 241, 0.2) !important;
+  box-shadow: 0 0 0 2px var(--accent-loop), 0 0 16px rgba(99, 102, 241, 0.45) !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.term-chip.chip-active {
+  transform: scale(0.94);
+  background: var(--accent-yellow) !important;
+  color: #121212 !important;
+}
+
+/* ==========================================================================
+   Contact Error Fallback Card
+   ========================================================================== */
+.contact-error-card {
+  padding: 2rem;
+  background: var(--surface-subtle);
+  border: 1.5px solid #ef4444;
+  border-radius: var(--radius-item);
+  text-align: center;
+  display: none;
+}
+
+.error-badge {
+  display: inline-block;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.75rem;
+}
+
+/* Hero CTA Button Variations */
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--text-main);
+  color: var(--card-bg);
+  border-radius: var(--radius-pill);
+  padding: 0.6rem 1.35rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.hero-btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface-subtle);
+  color: var(--text-main);
+  border: 1.5px solid var(--surface-border);
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.hero-btn-secondary:hover {
+  background: var(--card-bg);
+  border-color: var(--text-main);
+  transform: translateY(-1px);
+}
+
